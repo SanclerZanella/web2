@@ -58,9 +58,54 @@ console.log('x is a ' + typeof(x) + ' variable.');
 console.log('y is a ' + typeof(y) + ' variable.');
 console.log('z is a ' + typeof(z) + ' variable.');
 
-const person = {
+const car = {
     make: "BMW",
     model: "435d",
     engineSize: '3.0L',
     qtyDoors: 2,
-}
+    driveModes: ['EcoPro','Comfort', 'Sport', 'Sport Plus'],
+    attributes: {
+        colour: 'black',
+    },
+};
+
+console.log(car.make);
+
+// Output the make, colour and third drivemode of car.
+console.log(car.make, car.attributes.colour, car.driveModes[2]);
+
+// Destructuring:
+// Allows us to unpack the elements of an object and only select the ones we need.
+
+const a = [1, 2, 3, 4, 5];
+const [b, c] = a;
+console.log(b);
+console.log(c);
+
+// Create a sub-object of car to only store the values we really need,
+// make, model and colour
+
+const {
+    make,
+    model,
+    attributes: {colour},
+} = car;
+
+console.log(`The make is: ${make}, model is: ${model}, and the colour is ${colour}`);
+
+car.drivetrain = 'XDrive';
+
+console.log(car);
+
+const modules = [
+    {
+        id: 1,
+        title: 'Customer Service',
+        completed: false, 
+    },
+    {
+        id: 2,
+        title: 'Software Development',
+        completed: true,
+    },
+]
