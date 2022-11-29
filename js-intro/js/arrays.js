@@ -73,13 +73,15 @@ Comparisson
 const a = 5;
 const b = 10;
 
+// EQUAL
+
 if(a == 5) { // Double equal compare the value only
     console.log("a is equal to 5");
 } else {
     console.log("a is not equal to 5");
 }
 
-if(a === 5) { // Triple equal compare the value and the data type
+if(a === 5) { // Triple equal compare the value and also the data type
     console.log("a is equal to 5");
 } else {
     console.log("a is not equal to 5");
@@ -95,4 +97,45 @@ if(a === "5") {
     console.log("a is equal to 5");
 } else {
     console.log("a is not equal to 5");
+}
+
+// OR
+
+if(a > 5 || b < 10) {
+    console.log("a is greater than 5 AND/OR b is less than 10");
+} else {
+    console.log("a is not greater than 5 AND/OR b is not less than 10");
+}
+
+if(a > 5 && b < 11) {
+    console.log("a is greater than 5 AND b is less than 10");
+} else {
+    console.log("a is not greater than 5 AND/OR b is not less than 10");
+}
+
+/*
+Ternary Operator:
+    syntax:
+        condition ? trueExpression : falseExpression
+*/
+
+const c = 10;
+const colour = c == 20 ? 'Red' : 'Blue';
+
+console.log(`The colour is ${colour}`);
+
+// Switch Statement:
+
+switch(colour) {
+    case 'Red':
+            console.error('The colour is Red');
+            break;
+
+    case 'Blue':
+            console.error('The colour is Blue');
+            break;
+        
+    default:
+        console.error('No colour detected');
+        break;
 }
