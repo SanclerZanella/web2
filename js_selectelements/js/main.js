@@ -30,6 +30,9 @@ const myExitBtn = document.getElementById("exit");
 const myNextBtn = document.getElementById("next");
 // console.log(myNextBtn);
 
+const thealert = document.getElementById("alert");
+// console.log(myExitBtn);
+
 const myContainer = document.getElementsByClassName("container")
 // console.log(myContainer);
 
@@ -75,4 +78,11 @@ myExitBtn.addEventListener('click', function(e) {
 
 myNextBtn.addEventListener('mousedown', function(e) {
     console.log(this.type);
+    myContainer1.style.backgroundColor = "#6699ff";
 });
+
+thealert.addEventListener('click', myAlertFunc);
+
+function myAlertFunc(){
+    alert("I have been triggered by the alert button");
+};
